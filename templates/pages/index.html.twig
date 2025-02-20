@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+{% block body %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+
+    <div>
+        <img src="{{ asset('logo.jpeg') }}" alt="Exemple"> <br/>
+        Hello from Tozeur
+        <p>it's currently {{ 'now'|date('h:i A') }}</p>
+        
+    </div>
+     {% include 'partials/footer.twig.html' %}
+{% endblock %}
